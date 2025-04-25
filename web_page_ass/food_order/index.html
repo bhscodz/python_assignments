@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/ac0514ba62.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <!-- <div id="loading">
+        <img src="https://i.imgur.com/5zreN30.gif" alt="Loading...">
+    </div> -->
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #FF9800;">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bolder" href="#">pappon foods</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+                    <li class="nav-item" style="white-space: nowrap;"><a class="nav-link text-white" href="#recent">Recent Items</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#cart" data-bs-toggle="modal" data-bs-target="#cartModal">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Carousel -->
+    <div id="foodCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/1200/675?random=1" class="d-block w-100" alt="Food 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1200/675?random=2" class="d-block w-100" alt="Food 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1200/675?random=3" class="d-block w-100" alt="Food 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- Menu Section -->
+    <div class="container my-5" id="menu">
+        <h2 class="text-center" style="color: #FF9800;">Our Menu</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=4" class="card-img-top" alt="Food">
+                    <div class="card-body">
+                        <h5 class="card-title">Delicious Dish</h5>
+                        <p class="card-text">Tasty and freshly prepared.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                        <button class="btn btn-warning">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=5" class="card-img-top" alt="Food">
+                    <div class="card-body">
+                        <h5 class="card-title">Spicy Special</h5>
+                        <p class="card-text">A treat for spice lovers.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                        <button class="btn btn-warning">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=6" class="card-img-top" alt="Food">
+                    <div class="card-body">
+                        <h5 class="card-title">Sweet Delight</h5>
+                        <p class="card-text">A perfect dessert option.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                        <button class="btn btn-warning">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers -->
+    <div class="container my-5" id="special-offers">
+        <h2 class="text-center" style="color: #FF9800;">🔥 Special Offers 🔥</h2>
+        <div class="row g-4">
+            <!-- Offer 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="Offer 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Buy 1 Get 1 Free 🍔</h5>
+                        <p class="card-text">Order any burger and get another one absolutely FREE!</p>
+                        <button class="btn btn-success">Grab Offer</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Offer 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://picsum.photos/300/200?random=11" class="card-img-top" alt="Offer 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Flat 50% Off 🍕</h5>
+                        <p class="card-text">Get 50% off on all pizzas. Limited-time deal!</p>
+                        <button class="btn btn-success">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Offer 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://picsum.photos/300/200?random=12" class="card-img-top" alt="Offer 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Combo Deal 🥗 + 🍹</h5>
+                        <p class="card-text">Buy a healthy salad & get a refreshing drink FREE!</p>
+                        <button class="btn btn-success">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Items Section -->
+    <div class="container my-5" id="recent">
+        <h2 class="text-center" style="color: #FF9800;">Recent Orders</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=7" class="card-img-top" alt="Recent Order">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta</h5>
+                        <p class="card-text">Delicious creamy pasta.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=8" class="card-img-top" alt="Recent Order">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="card-text">Juicy grilled burger.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=9" class="card-img-top" alt="Recent Order">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Cheesy loaded pizza.</p>
+                        <p class="card-text text-success">only 499/-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cart-items">
+                    Your cart is empty.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center text-lg-start text-white" style="background-color: #FF9800; padding: 20px;">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Food Order. All Rights Reserved.</p>
+            <p class="mb-0">Created by <strong>Bhaskar</strong></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

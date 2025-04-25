@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>shop ease</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <script defer src="./main.js"></script>
+        <script src="https://kit.fontawesome.com/ac0514ba62.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#products">Shop</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#cart" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            Cart <i class="bi bi-cart"></i> <span id="cart-badge" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to ShopEase</h1>
+            <p class="lead">Find the best deals on top products!</p>
+            <a href="#products" class="btn btn-light mt-3">Start Shopping</a>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <div class="container my-5" id="categories">
+        <h2 class="text-center text-primary">🛍️ Shop by Category</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="category-box">
+                    <i class="bi bi-laptop fs-1"></i>
+                    <h5 class="mt-2">Electronics</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-box">
+                    <i class="bi bi-watch fs-1"></i>
+                    <h5 class="mt-2">Accessories</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-box">
+                    <i class="bi bi-bag fs-1"></i>
+                    <h5 class="mt-2">Fashion</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-box">
+                    <i class="bi bi-house fs-1"></i>
+                    <h5 class="mt-2">Home & Decor</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="container my-5" id="products">
+        <h2 class="text-center text-primary">🔥 Featured Products</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=13" class="card-img-top" alt="Product">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Gaming Laptop</h5>
+                        <p class="card-text">$1299.99</p>
+                        <button class="btn btn-success" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=14" class="card-img-top" alt="Product">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Smartphone</h5>
+                        <p class="card-text">$799.99</p>
+                        <button class="btn btn-success" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=15" class="card-img-top" alt="Product">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wireless Earbuds</h5>
+                        <p class="card-text">$99.99</p>
+                        <button class="btn btn-success" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-white bg-dark py-3">
+        <p class="mb-0">© 2025 ShopEase. All Rights Reserved.</p>
+        <p class="mb-0">Created by <strong>Bhaskar</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

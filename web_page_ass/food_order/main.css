@@ -1,0 +1,47 @@
+:root{
+    --bg-col:black;
+}
+body{
+    background-color: #FFF5E1;
+    background-image: url('https://www.transparenttextures.com/patterns/food.png');
+    background-repeat: repeat;
+    opacity: 0.9;
+}
+#special-offers {
+    background: #FFFAE5; /* Light Yellow Background */
+    padding: 40px;
+    border-radius: 10px;
+}
+#special-offers .card {
+    transition: transform 0.3s ease-in-out;
+}
+#special-offers .card:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+img{
+    object-fit: cover;
+}
+.card img{
+    height:45vh;
+}
+#foodCarousel img{
+    width:auto;
+    height:60vh;
+    object-fit: cover;
+}
+#menu img{
+    height:45vh;
+    width:auto;
+    object-fit: cover;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+#recent img{
+    width:auto;
+    height: 45vh;
+    object-fit:cover;
+}
